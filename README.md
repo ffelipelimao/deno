@@ -1,4 +1,4 @@
-# Deno Skeleton
+# Deno Games Project
 
 ### Installation
 
@@ -12,4 +12,11 @@
 
 ### Run
 
-- `deno run --allow-net server.ts`
+- `denon start`
+
+### Libs
+
+- https://github.com/denolib/awesome-deno
+
+- oak
+- denon
