@@ -1,5 +1,5 @@
 import { v4 } from "https://deno.land/std@0.99.0/uuid/mod.ts";
-import { GameType } from "../../../../src/modules/wishlist/types/game.ts";
+import { GameType } from "../../../../../src/modules/wishlist/types/game.ts";
 import { Wishlist } from "../entities/wishlist.ts";
 
 
