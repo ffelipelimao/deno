@@ -2,8 +2,8 @@ import { MongoDBConnector, Database } from 'https://deno.land/x/denodb@v1.0.38/m
 import { Wishlist } from "../entities/wishlist.ts";
 
 const connector = new MongoDBConnector({
-  uri: 'mongodb://127.0.0.1:27017',
-  database: 'test',
+  uri: 'mongodb://mongoadmin:secret@localhost:27888/?authSource=admin',
+  database: 'games',
 });
 
 export const connectDB = async () => {

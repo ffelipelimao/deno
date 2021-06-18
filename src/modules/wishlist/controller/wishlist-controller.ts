@@ -7,13 +7,9 @@ export class WishlistController {
 
     async handle(context: Context){
 
-        console.log('Passou por aqui')
-
         const body = await context.request.body().value
 
         const wishlistService = new WishlistService(new WhishlistRepository())
-
-        console.log('Passou por aqui')
 
         const game = await wishlistService.create(body)
                 

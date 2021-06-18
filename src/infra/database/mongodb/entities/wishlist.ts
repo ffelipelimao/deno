@@ -7,6 +7,7 @@ export class Wishlist extends Model{
     static fields = {
         _id: {
           primaryKey: true,
+          autoIncrement: true
         },
         name: {
           type: DataTypes.STRING,

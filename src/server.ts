@@ -1,5 +1,5 @@
 import { Application } from 'https://deno.land/x/oak@v7.5.0/mod.ts'
-import { connectDB } from "../infra/database/mongodb/config/connection.ts";
+import { connectDB } from "./infra/database/mongodb/config/connection.ts";
 
 import gamesRouter from './modules/games/routes/games-router.ts'
 import wishlistRouter from './modules/wishlist/routes/wishlist-routes.ts'
