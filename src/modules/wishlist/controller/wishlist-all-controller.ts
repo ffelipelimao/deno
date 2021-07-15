@@ -1,19 +1,17 @@
-import { Context } from 'https://deno.land/x/oak@v7.5.0/context.ts'
+import { Context } from "https://deno.land/x/oak@v7.5.0/context.ts";
+import { ok } from "../../../helpers/oak-http-helper.ts";
 import { WhishlistRepository } from "../../../infra/database/mongodb/repositories/whishlist-repository.ts";
-import { ok } from '../../../helpers/oak-http-helper.ts'
 import { WishlistService } from "../service/wishlist-service.ts";
 
-export class WishlistController {
+export class WishlistAllController {
 
     async handle(context: Context){
 
-        const body = await context.request.body().value
-
         const wishlistService = new WishlistService(new WhishlistRepository())
 
-        const game = await wishlistService.create(body)
+        const games = await wishlistService.list()
                 
-        return ok(game, context)
+        return ok(games, context)
      
     }
 }

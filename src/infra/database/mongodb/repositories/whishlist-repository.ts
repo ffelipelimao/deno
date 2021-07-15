@@ -18,4 +18,30 @@ export class WhishlistRepository {
         
         }
     }
+
+    async listAllGames(){
+        
+        try {
+
+            const games =  await Wishlist.all()
+            return games
+        } catch (error) {
+          console.log(error)
+        
+        }
+
+    }
+
+    async deleteGameById(id: string){
+
+        try {
+            const game =  await Wishlist.deleteById(id)
+            return game
+        
+        } catch (error) {
+          console.log(error)
+        
+        }
+    }
+
 }
